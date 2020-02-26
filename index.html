@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wx by Zip</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- link to bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+    <div id="main">
+
+        <h5>Get Weather by Zip Code</h5>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="zip code" id="zipCode">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="getWx">
+                    Get Weather
+                </button>
+            </div>
+        </div>
+    
+        <div class="wrapper">
+
+            <!-- I think I hate bootstrap. -->
+            <div id="spinner" class="hidden">
+                <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                    <div class="spinner-grow spinner-grow-sm text-info" role="status"></div>    
+                </div>
+            </div>
+
+            <div id="results" class="hidden">
+    
+                <hr>
+                <h5 id="headline" class="mb-3"></h5>
+    
+                <div class="temp reading">
+                    <p class="label">Temperature: </p>
+                    <p class="value" id="temp"></p>
+                    <img class="icon nodisplay" id="hot" src="images/hot.png">
+                    <img class="icon nodisplay" id="cold" src="images/cold.png">    
+                </div>
+    
+                <div class="wind reading">
+                    <p class="label">Wind Speed: </p>
+                    <p class="value" id="windSpeed"></p>
+                    <img class="icon nodisplay" id="windy" src="images/windy.png" alt="windy">    
+                    <p class="label">Direction:</p>
+                    <img class="icon icon-small" id="windArrow" src="images/wind-arrow.png" alt="direction">
+                </div>
+    
+                <div class="other reading">
+                    <p class="label">Clouds: </p>
+                    <p class="value" id="cloudObs"></p>     
+                    <p class="label">Humidity: </p>
+                    <p class="value" id="humidity"></p>
+                    <p class="label">Dewpoint: </p>
+                    <p class="value" id="dewPoint"></p>       
+                </div>
+
+                <div class="details">
+                    <p class="station"></p>
+                </div>
+    
+                <hr>
+                <p id="dataSource"></p>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+</body>
+</html>
