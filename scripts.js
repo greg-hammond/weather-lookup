@@ -65,7 +65,7 @@ const getLocData = async (zip) => {
     };
 
     const srchParams = new URLSearchParams(params);
-    const URL = "https://api.geonames.org/postalCodeSearchJSON?" + srchParams.toString();
+    const URL = "http://api.geonames.org/postalCodeSearchJSON?" + srchParams.toString();
 
     const resp = await fetch(URL);
     const json = await resp.json();
@@ -89,7 +89,7 @@ const getWeatherForCoords = async (lat, lng) => {
     };
 
     const paramStr = new URLSearchParams(params);
-    const URL = "https://api.geonames.org/findNearByWeatherJSON?" + paramStr.toString();
+    const URL = "http://api.geonames.org/findNearByWeatherJSON?" + paramStr.toString();
 
     const resp = await fetch(URL)
     const json = await resp.json();
